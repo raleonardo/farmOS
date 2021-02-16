@@ -26,10 +26,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - 
         name: Get version tag
+        id: get_version
         run: echo ::set-output name=VERSION_TAG::${GITHUB_REF#refs/tags/}
       - 
         name: print version tag
-        run: echo "$VERSION_TAG"
+        run: echo ${{ steps.get_version.outputs.VERSION_TAG }}
       # -
       #   name: Build and push
       #   uses: docker/build-push-action@v2
