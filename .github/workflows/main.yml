@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches: 7.x-1.x
-    tags: 7.x-1.*
+    #tags: 7.x-1.*
 
 jobs:
   multi:
