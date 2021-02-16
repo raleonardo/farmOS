@@ -27,6 +27,9 @@ jobs:
       - 
         name: Get version tag
         run: echo ::set-output name=VERSION_TAG::${GITHUB_REF#refs/tags/}
+      - 
+        name: print version tag
+        run: echo ${{ env.VERSION_TAG  }}
       # -
       #   name: Build and push
       #   uses: docker/build-push-action@v2
