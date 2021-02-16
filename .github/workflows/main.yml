@@ -34,4 +34,4 @@ jobs:
           push: true
           tags: |
             raleonardo/farmos:latest
-            raleonardo/farmos:$GITHUB_REF
+            raleonardo/farmos:${ GITHUB_REF }
