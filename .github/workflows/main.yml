@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches: master
+    branches: 7.x-1.x
     tags: 7.x-1.*
 
 jobs:
@@ -33,5 +33,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            user/app:latest
-            user/app:1.0.0
+            raleonardo/farmos:latest
+            raleonardo/farmos:$GITHUB_REF
